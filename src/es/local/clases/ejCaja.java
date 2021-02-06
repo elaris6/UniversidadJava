@@ -4,13 +4,14 @@ public class ejCaja {
 
     public static void main(String[] args) {
 
+        // Comentario añadido desde el trabajo
         Caja c1 = new Caja();
         c1.alto = 3;
         c1.ancho = 4;
         c1.profundo = 2;
         System.out.println("El volumen de la caja es: "+c1.getVolumen());
 
-        Caja c2 = new Caja(5,3,7);
+        Caja c2 = new Caja(5,3,4);
         System.out.println("El volumen de la caja es: "+c2.getVolumen());
     }
 }
