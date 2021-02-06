@@ -1,8 +1,8 @@
-package com.local.aaaTareas;
+package es.local.basicos;
 
 import java.util.Scanner;
 
-public class Permitetro {
+public class CalculaPerimetro {
 
     public static void main(String[] args) {
 

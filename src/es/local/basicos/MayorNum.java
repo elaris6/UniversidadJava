@@ -1,4 +1,4 @@
-package com.local.aaaTareas;
+package es.local.basicos;
 
 import java.util.Scanner;
 
