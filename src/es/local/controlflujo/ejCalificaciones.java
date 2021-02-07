@@ -1,4 +1,4 @@
-package es.local.sentenciasControlFlujo;
+package es.local.controlflujo;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.local.basicos;
+package es.local.basicos;
 
 public class VariablesDos {
     

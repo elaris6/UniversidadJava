@@ -1,4 +1,4 @@
-package com.local.basicos;
+package es.local.basicos;
 
 /* VARIABLES 
 Las buenas prácticas para nombrar variables es hacerlo en lowerCamelCase.
@@ -17,7 +17,18 @@ public class Variables {
         
         // String no es un tipo primitivo, es una Clase
         String cadena = "Esto es una cadena";
+
+        /* Se puede crear objetos de tipo String con el constructor de la clase.
+        * La diferencia es que si lo hacemos así, estaremos reservando un espacio
+        * específico para esa variable en la memoria HEAP, no en la STACK, donde
+        * solo se almacenan tipos primitivos o referencias a objetos.
+        * Si lo hacemos del modo sencillo, la JVM almacenará los strings en un
+        * espacio de memoria llamado pool string en el que almacenará todos los
+        * strings para optimizar el uso de memoria y si hay varios strings iguales
+        * reutilizarla. */
+        String otraCadena = new String("Esto es otra cadena");
         System.out.println(cadena);
+        System.out.println("otraCadena = " + otraCadena);
         
         cadena = "Modificamos la cadena";
         System.out.println(cadena);
