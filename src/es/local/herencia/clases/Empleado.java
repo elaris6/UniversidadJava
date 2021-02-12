@@ -21,10 +21,33 @@ public class Empleado extends Persona{
     /* Al no inicializarlo, por defecto el contador se inicializará con valor 0.*/
     private static int contadorId;
 
+    /* SOBRECARGA DE CONSTRUCTORES */
+
     /* Los constructores no se heredan, pero se pueden acceder a través de la
     * palabra reservada "super".
-    * Auqnue no se hereden los constructores personalizados, el constructor
+    * Aunque no se hereden los constructores personalizados, el constructor
     * vacío por defecto, siempre será usable. */
+
+    public Empleado(){
+        //super(); llamado implícitamente
+        this.idEmpleado = Empleado.contadorId++;
+    }
+
+    public Empleado(String nombre){
+
+        /* Si tenemos sobrecarga de constructores, podemos llamar al constructor
+        * vacío mediante la sentencia "this();".
+        * NO podemos usar en el mismo constructor esta sentencia y la sentencia
+        * "super()", para llamara al constructor de la clase padre. */
+        //super(nombre);
+        this();
+        /* Ya que no podemos llamar a "super", debemos inicializar los atributos
+        * que no sean inicializados en el constructor llamado con "this", accediendo
+        * a ellos directamente. Podemos acceder a los atributos si están definidos
+        * como "protected". */
+        this.nombre = nombre;
+
+    }
 
     public Empleado(String nombre, double sueldo) {
         /* Si se desea incluir un constructor de la clase padre, obligatoriamente
@@ -61,7 +84,7 @@ public class Empleado extends Persona{
         /* Para optimizar el uso d3e cadenas se puede usar el método "append" de la
         * clase "string", a través de un clase hija llamada "StringBuilder" que
         * realiza las concatenaciones.
-        * La opcimización se debe a que los Objetos de tipo "String" son inmutables,
+        * La optimización se debe a que los Objetos de tipo "String" son inmutables,
         * no se pueden modificar, por lo que si concatenamos con "+", en realidad se
         * están creando constantemente nuevos objetos en memoria.
         * Mediante la clase "StringBuilder" se evita este problema. */
@@ -76,5 +99,22 @@ public class Empleado extends Persona{
         /* Para devolver un string es necesario invocar el método "toString" sobre
         * variable de tipo "StringBuilder". */
         return sb.toString();
+    }
+
+    /* SOBRECARGA DE MÉTODOS */
+
+    /* Cuando se dispone de más de un método con el mismo nombre se dice que tenemos
+    * sobrecarga en el método, o que el método está sobrecargado.
+    * Las variantes del método deben recibir argumentos diferentes para poder
+    * diferenciarse.  */
+
+    public double setAumento(){
+        this.sueldo*=1.05;
+        return this.sueldo;
+    }
+
+    public double setAumento(double aumento){
+        this.sueldo*=aumento;
+        return this.sueldo;
     }
 }
