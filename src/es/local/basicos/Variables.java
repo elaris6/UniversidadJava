@@ -1,5 +1,7 @@
 package es.local.basicos;
 
+import es.local.basicos.herencia.clases.Persona;
+
 /* VARIABLES 
 Las buenas prácticas para nombrar variables es hacerlo en lowerCamelCase.
 Las variables solo podrán comenzar por letra, guión bajo o el símbolo del
@@ -35,13 +37,17 @@ public class Variables {
         
         /* Podemos usar la palabra reservada "var", para que Java infiera el tipo
         de una variable en función del valor asignado.
-        Esta funcionalidad se introdujo a partir de la versión 10. */
+        Esta funcionalidad se introdujo a partir de la versión 10 y se puede usar
+        tanto para inferir tipos primitivos como tipos Object. */
         
         var unaVariable = 23;
         System.out.println(unaVariable);
         
         var otraVariable = "Una cadena de texto";
         System.out.println("otraVariable = " + otraVariable);
+
+        /* Uso de "var con un tipo Object. */
+        var per = new Persona("Juan");
         
         /* No se podrá usar "var" si no se inicializa la variable, pues Java no
         podrá inferir el tipo. No es válido iniciarla después de declararla. */

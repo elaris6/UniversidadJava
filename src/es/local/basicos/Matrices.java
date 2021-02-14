@@ -1,6 +1,6 @@
 package es.local.basicos;
 
-import es.local.herencia.clases.*;
+import es.local.basicos.herencia.clases.*;
 
 public class Matrices {
 

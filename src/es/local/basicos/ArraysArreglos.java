@@ -1,13 +1,14 @@
 package es.local.basicos;
 
-import es.local.herencia.clases.*;
+import es.local.basicos.herencia.clases.*;
 
 public class ArraysArreglos {
 
     /* ARRAYS O ARREGLOS */
 
     /* Los Arrays o Arreglos son conjuntos de elementos que pueden almacenar tanto
-    * tipos primitivos como Object.
+    * tipos primitivos como Object, pero no se podrá utilizar "var" para inferir el
+    * tipo contenido, se deberá especificar.
     * El tamaño de los arrays es FIJO y cada elemento se almacena en una posición,
     * llamada índice. Las posiciones van enumeradas de menor a mayor, comenzando
     * por cero "0". */
